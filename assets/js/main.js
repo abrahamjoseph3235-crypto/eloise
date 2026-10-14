@@ -9,4 +9,6 @@ document.addEventListener('DOMContentLoaded',function(){
     dlg.querySelector('.close').addEventListener('click',function(){var v=dlg.querySelector('video');if(v)v.pause();dlg.close()})}
   document.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
     var m=f.querySelector('.form-msg');if(m)m.textContent='Thank you. (Demo only: connect this form to your backend or form service.)'})});
+  var prefs=document.getElementById('save-client-preferences');
+  if(prefs)prefs.addEventListener('click',function(){var m=document.getElementById('client-preferences-message');if(m)m.textContent='Preview only: preferences have not been saved to an account.';});
 });

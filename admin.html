@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Operations console | Eloise</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin-body">
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <a class="admin-brand" href="index.html" aria-label="Eloise home"><img src="assets/img/logo-light.svg" alt="Eloise"></a>
+    <div class="admin-label">OPERATIONS</div>
+    <nav class="admin-nav" aria-label="Administration">
+      <a class="active" href="#overview" data-section="overview"><span>▦</span> Overview</a>
+      <a href="#users" data-section="users"><span>♙</span> People & providers <b class="nav-count">8</b></a>
+      <a href="#sessions" data-section="sessions"><span>◷</span> Sessions & activity</a>
+      <a href="#interviews" data-section="interviews"><span>☷</span> Applications & interviews <b class="nav-count amber">4</b></a>
+      <a href="#feedback" data-section="feedback"><span>✉</span> Feedback & support <b class="nav-count coral">3</b></a>
+      <a href="#services" data-section="services"><span>◇</span> Appointments</a>
+      <a href="#reports" data-section="reports"><span>▤</span> Reports</a>
+      <a href="#audit" data-section="audit"><span>✓</span> Audit trail</a>
+      <a href="#settings" data-section="settings"><span>⚙</span> Settings</a>
+    </nav>
+    <div class="admin-side-note"><span class="status-dot"></span><div><strong>Prototype workspace</strong><small>Sample data only</small></div></div>
+    <a class="admin-back" href="index.html">← Back to public site</a>
+  </aside>
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div><div class="eyebrow">ELOISE / ADMINISTRATION</div><h1 id="page-title">Overview</h1></div>
+      <div class="admin-top-actions"><span class="demo-pill"><span></span> DEMO DATA</span><button class="admin-button secondary" id="admin-logout" type="button">Sign out</button><button class="admin-avatar" aria-label="Administrator">AD</button></div>
+    </header>
+    <div class="prototype-warning" role="note"><strong>Preview only:</strong> This page is protected by server-verified admin sign-in. Records and actions are still simulated in this browser; connect authorized APIs and persistent audit logging before using real client or provider data.</div>
+
+    <section class="admin-section active" id="overview" data-title="Overview">
+      <div class="welcome-row"><div><h2>Good evening, Admin</h2><p class="mut">Here’s a snapshot of the Eloise platform.</p></div><span class="date-chip" id="today-date">Platform overview</span></div>
+      <div class="admin-stats">
+        <article class="stat-card"><div class="stat-top"><span>Total accounts</span><span class="stat-icon">♙</span></div><strong>1,284</strong><small class="positive">↑ 8.4% <span>vs last month</span></small></article>
+        <article class="stat-card"><div class="stat-top"><span>Provider applications</span><span class="stat-icon amber-icon">☷</span></div><strong id="pending-stat">24</strong><small><span class="stat-tag">8 need review</span></small></article>
+        <article class="stat-card"><div class="stat-top"><span>Sessions this month</span><span class="stat-icon">◷</span></div><strong>386</strong><small class="positive">↑ 12.6% <span>vs last month</span></small></article>
+        <article class="stat-card"><div class="stat-top"><span>Open support items</span><span class="stat-icon coral-icon">✉</span></div><strong id="open-feedback-stat">12</strong><small><span class="stat-tag coral-tag">3 high priority</span></small></article>
+      </div>
+      <div class="admin-content-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><h3>Platform activity</h3><p class="mut">Illustrative weekly activity</p></div><span class="mini-label">LAST 7 DAYS</span></div>
+          <div class="chart" aria-label="Illustrative activity chart">
+            <div class="chart-y"><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div>
+            <div class="chart-bars">
+              <div class="chart-column"><i style="height:42%"></i><i class="bar-light" style="height:24%"></i><span>Mon</span></div>
+              <div class="chart-column"><i style="height:56%"></i><i class="bar-light" style="height:30%"></i><span>Tue</span></div>
+              <div class="chart-column"><i style="height:48%"></i><i class="bar-light" style="height:34%"></i><span>Wed</span></div>
+              <div class="chart-column"><i style="height:72%"></i><i class="bar-light" style="height:28%"></i><span>Thu</span></div>
+              <div class="chart-column"><i style="height:62%"></i><i class="bar-light" style="height:39%"></i><span>Fri</span></div>
+              <div class="chart-column"><i style="height:84%"></i><i class="bar-light" style="height:36%"></i><span>Sat</span></div>
+              <div class="chart-column"><i style="height:66%"></i><i class="bar-light" style="height:26%"></i><span>Sun</span></div>
+            </div>
+          </div>
+          <div class="chart-legend"><span><i></i> Sessions</span><span><i class="legend-light"></i> New accounts</span><small>Sample visual — not connected to analytics</small></div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading"><div><h3>Needs attention</h3><p class="mut">Suggested next actions</p></div></div>
+          <a class="attention-item" href="#interviews" data-go="interviews"><span class="attention-icon amber-icon">☷</span><span><strong>Provider applications</strong><small>8 awaiting credential review</small></span><b>→</b></a>
+          <a class="attention-item" href="#feedback" data-go="feedback"><span class="attention-icon coral-icon">✉</span><span><strong>Support inbox</strong><small>3 high-priority items</small></span><b>→</b></a>
+          <a class="attention-item" href="#sessions" data-go="sessions"><span class="attention-icon">◷</span><span><strong>Session review</strong><small>2 appointment conflicts flagged</small></span><b>→</b></a>
+          <p class="privacy-hint">Access only the minimum information needed for your role.</p>
+        </article>
+      </div>
+      <article class="panel table-panel">
+        <div class="panel-heading"><div><h3>Recent platform events</h3><p class="mut">Demo event feed</p></div><button class="text-button" data-go="sessions">View activity →</button></div>
+        <div class="table-wrap"><table><thead><tr><th>Event</th><th>Account</th><th>Category</th><th>Time</th><th>Status</th></tr></thead><tbody id="recent-events"></tbody></table></div>
+      </article>
+    </section>
+
+    <section class="admin-section" id="users" data-title="People & providers">
+      <div class="section-intro"><div><h2>People & providers</h2><p class="mut">Review account status and provider verification workflow.</p></div><button class="admin-button primary" id="export-users">Export demo CSV</button></div>
+      <div class="toolbar"><input id="user-search" type="search" placeholder="Search name or email…" aria-label="Search users"><select id="user-role" aria-label="Filter by role"><option value="all">All roles</option><option>Client</option><option>Provider</option><option>Runner</option><option>Admin</option></select><select id="user-status" aria-label="Filter by status"><option value="all">All statuses</option><option>Active</option><option>Pending</option><option>Suspended</option></select></div>
+      <article class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Person</th><th>Role</th><th>Joined</th><th>Verification</th><th>Status</th><th>Action</th></tr></thead><tbody id="users-table"></tbody></table></div><p class="table-foot">All names and accounts below are fictional sample records.</p></article>
+    </section>
+
+    <section class="admin-section" id="sessions" data-title="Sessions & activity">
+      <div class="section-intro"><div><h2>Sessions & activity</h2><p class="mut">Review sign-in events, appointment activity and demo session states.</p></div><button class="admin-button primary" id="refresh-activity">Refresh sample feed</button></div>
+      <div class="admin-stats compact-stats"><article class="stat-card"><span>Active demo sessions</span><strong>18</strong><small>Sample count only</small></article><article class="stat-card"><span>Failed sign-ins today</span><strong>5</strong><small class="caution-text">Would require review</small></article><article class="stat-card"><span>Appointment conflicts</span><strong>2</strong><small>Sample flags only</small></article></div>
+      <article class="panel table-panel"><div class="panel-heading"><div><h3>Activity log</h3><p class="mut">No private therapy notes or assessment answers are displayed here.</p></div><input id="activity-search" class="compact-search" type="search" placeholder="Filter events…"></div><div class="table-wrap"><table><thead><tr><th>Activity</th><th>Actor</th><th>Type</th><th>Timestamp</th><th>Result</th></tr></thead><tbody id="activity-table"></tbody></table></div></article>
+      <div class="privacy-hint wide-hint">Production requirement: record session creation/revocation and security events on the server. Do not rely on browser logs for security auditing.</div>
+    </section>
+
+    <section class="admin-section" id="interviews" data-title="Applications & interviews">
+      <div class="section-intro"><div><h2>Applications & interviews</h2><p class="mut">Track provider applications, interview outcomes and credential checks.</p></div><button class="admin-button secondary" id="export-applications">Export demo CSV</button></div>
+      <div class="toolbar"><input id="application-search" type="search" placeholder="Search applicants…" aria-label="Search applicants"><select id="application-status" aria-label="Filter applications"><option value="all">All stages</option><option>New</option><option>Credential review</option><option>Interview scheduled</option><option>Interview complete</option><option>Approved</option><option>Declined</option></select></div>
+      <article class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Applicant</th><th>Specialty</th><th>Stage</th><th>Interview</th><th>Outcome</th><th>Action</th></tr></thead><tbody id="applications-table"></tbody></table></div></article>
+      <article class="panel scorecard"><div><h3>Interview scorecard template</h3><p class="mut">Use a consistent rubric; decisions must be reviewed by an authorized human.</p></div><div class="score-grid"><label>Professional credentials<select><option>Not reviewed</option><option>Meets requirements</option><option>Further review needed</option></select></label><label>Ethics & safeguarding<select><option>Not reviewed</option><option>Meets requirements</option><option>Further review needed</option></select></label><label>Clinical experience<select><option>Not reviewed</option><option>Meets requirements</option><option>Further review needed</option></select></label><label>Interview decision<select><option>Pending</option><option>Advance</option><option>Hold for review</option><option>Do not advance</option></select></label></div><p class="mut small-note">Demo-only controls; scores and decisions are not saved or sent to an applicant.</p></article>
+    </section>
+
+    <section class="admin-section" id="feedback" data-title="Feedback & support">
+      <div class="section-intro"><div><h2>Feedback & support</h2><p class="mut">Triage product feedback, support requests and service complaints.</p></div><button class="admin-button primary" id="export-feedback">Export demo CSV</button></div>
+      <div class="toolbar"><input id="feedback-search" type="search" placeholder="Search feedback…" aria-label="Search feedback"><select id="feedback-filter" aria-label="Filter feedback"><option value="all">All priorities and statuses</option><option>High</option><option>Open</option><option>In progress</option><option>Resolved</option></select></div>
+      <div class="feedback-layout"><div class="panel feedback-list" id="feedback-list"></div><article class="panel feedback-detail" id="feedback-detail"><span class="mini-label">SELECT AN ITEM</span><h3>Feedback details</h3><p class="mut">Choose a message to inspect its demo details and update its status.</p></article></div>
+      <p class="privacy-hint">Do not request unnecessary clinical details through general feedback forms. Urgent-care needs should be directed to the appropriate local emergency service.</p>
+    </section>
+
+    <section class="admin-section" id="services" data-title="Appointments">
+      <div class="section-intro"><div><h2>Appointments</h2><p class="mut">Monitor booking statuses, schedule conflicts and service quality.</p></div><button class="admin-button secondary" id="export-appointments">Export demo CSV</button></div>
+      <div class="toolbar"><input id="appointment-search" type="search" placeholder="Search appointment or provider…" aria-label="Search appointments"><select id="appointment-status"><option value="all">All statuses</option><option>Booked</option><option>Needs attention</option><option>Completed</option><option>Cancelled</option></select></div>
+      <article class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>Reference</th><th>Provider</th><th>Format</th><th>Scheduled</th><th>Status</th><th>Action</th></tr></thead><tbody id="appointments-table"></tbody></table></div></article>
+      <p class="privacy-hint">Scheduling metadata only. Restrict access to session content and clinical records separately.</p>
+    </section>
+
+    <section class="admin-section" id="reports" data-title="Reports">
+      <div class="section-intro"><div><h2>Reports</h2><p class="mut">Illustrative operational summaries for planning.</p></div></div>
+      <div class="report-grid"><article class="panel"><span class="mini-label">SERVICE DELIVERY</span><h3>Sessions completed</h3><strong class="report-number">312</strong><p class="mut">Sample monthly count</p><div class="report-track"><i style="width:76%"></i></div><small>76% of sample monthly target</small></article><article class="panel"><span class="mini-label">PROVIDER NETWORK</span><h3>Verified providers</h3><strong class="report-number">46</strong><p class="mut">Sample approved accounts</p><div class="report-track"><i style="width:64%"></i></div><small>64% of sample network target</small></article><article class="panel"><span class="mini-label">SUPPORT QUALITY</span><h3>Resolution rate</h3><strong class="report-number">89%</strong><p class="mut">Illustrative value only</p><div class="report-track"><i style="width:89%"></i></div><small>Not calculated from live tickets</small></article></div>
+      <article class="panel"><h3>Data export policy</h3><p class="mut">Production exports should require an explicit permission, a reason for access, an expiry/retention policy and an audit event. Exclude clinical details by default.</p><ul class="plain"><li>Operational activity and account metadata</li><li>Aggregated appointment and support trends</li><li>Provider verification status and interview workflow</li><li>Never bulk-export private session notes by default</li></ul></article>
+    </section>
+
+    <section class="admin-section" id="audit" data-title="Audit trail">
+      <div class="section-intro"><div><h2>Audit trail</h2><p class="mut">Example of the events the production backend should capture.</p></div><button class="admin-button secondary" id="export-audit">Export demo CSV</button></div>
+      <article class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>When</th><th>Administrator</th><th>Action</th><th>Target</th><th>Reason</th></tr></thead><tbody id="audit-table"></tbody></table></div></article>
+      <div class="privacy-hint wide-hint">Audit events must be append-only on the server, protected from ordinary administrators, and retained according to a documented policy. This static prototype does not create a real audit trail.</div>
+    </section>
+
+    <section class="admin-section" id="settings" data-title="Settings">
+      <div class="section-intro"><div><h2>Settings & access</h2><p class="mut">Design preview of platform controls and role boundaries.</p></div></div>
+      <div class="settings-grid">
+        <article class="panel"><h3>Administrator access</h3><p class="mut">Assign the minimum permission needed for each job.</p><div class="setting-row"><div><strong>Platform owner</strong><small>Full configuration and user access management</small></div><span class="role-pill">Owner</span></div><div class="setting-row"><div><strong>Provider reviewer</strong><small>Applications, credentials and interview scorecards</small></div><span class="role-pill">Review</span></div><div class="setting-row"><div><strong>Support specialist</strong><small>Tickets and limited account metadata</small></div><span class="role-pill">Support</span></div><div class="setting-row"><div><strong>Finance operator</strong><small>Payment status and reconciliation only</small></div><span class="role-pill">Finance</span></div></article>
+        <article class="panel"><h3>Security checklist</h3><label class="check-row"><input type="checkbox"> Server-enforced role permissions</label><label class="check-row"><input type="checkbox"> Admin MFA required</label><label class="check-row"><input type="checkbox"> Login throttling and lockout policy</label><label class="check-row"><input type="checkbox"> Session expiry and revocation</label><label class="check-row"><input type="checkbox"> Encrypted transport and secure cookies</label><label class="check-row"><input type="checkbox"> Audited, reason-based sensitive access</label><p class="mut small-note">Checkboxes are a local planning checklist, not security settings.</p></article>
+        <article class="panel"><h3>Privacy defaults</h3><p class="mut">Recommended access boundaries for a mental-health platform.</p><ul class="plain"><li>Hide clinical notes from general support roles</li><li>Show aggregate assessment analytics by default</li><li>Require reason and elevated permission for exceptional access</li><li>Provide retention, correction and deletion request workflows</li><li>Review legal and clinical obligations in every operating country</li></ul></article>
+        <article class="panel"><h3>Platform notices</h3><label for="notice-text">Draft a notice</label><textarea id="notice-text" rows="4" placeholder="Write a notice for the production announcement system…"></textarea><button class="admin-button primary" id="preview-notice">Preview notice</button><p class="form-msg" id="notice-preview" role="status"></p></article>
+      </div>
+    </section>
+    <footer class="admin-footer"><span>© <span id="admin-year">2026</span> Eloise Operations</span><span>Private prototype · Sample records only</span></footer>
+  </main>
+</div>
+<div class="toast" id="admin-toast" role="status" aria-live="polite"></div>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

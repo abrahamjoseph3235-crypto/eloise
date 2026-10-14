@@ -1,0 +1,13 @@
+# Local secrets — never commit
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+.wrangler/
+cloudflare-dist/
+.pages-secrets.json
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
