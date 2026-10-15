@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wellbeing check-in | Eloise</title>
+<meta name="description" content="A free, non-diagnostic wellbeing check-in with an optional professional interpretation pathway.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="container"><a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Eloise home"></a><button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button><nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="matching.html">Find support</a><a href="assessment.html" aria-current="page">Wellbeing check-in</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="provider.html">Become a provider</a></nav></div></header>
+<main id="main"><div class="container">
+<section class="hero assess-hero"><div><span class="badge">Free starting point</span><h1>A gentle check-in, not a diagnosis.</h1><p class="lead">Reflect on what kind of support could be useful. Your free summary is generated in this browser from the options you select. A paid professional interpretation is a separate service planned for launch.</p><div class="trust"><span>✓ Free basic summary</span><span>✓ No score or diagnosis</span><span>✓ Demo answers are not sent</span></div></div><div class="card dark"><h2>Your wellbeing matters.</h2><p>This prototype is not a validated clinical assessment, does not monitor risk, and cannot replace a qualified professional.</p><p class="small-note">Please do not enter names, contact details, diagnoses, medication information or other private health details here.</p></div></section>
+<section class="section assessment-panel">
+<div class="card"><div class="section-heading"><span class="step-label">STEP 1 · AGE AND SAFETY</span><h2>Before you begin</h2><p class="mut">Choose the option that best describes you. This is a demonstration, not an age-verification or consent system.</p></div>
+<div class="choice-grid age-options">
+<label class="choice"><input type="radio" name="audience" value="adult"><span><b>I am 18 or older</b><small>Continue to the general wellbeing reflection.</small></span></label>
+<label class="choice"><input type="radio" name="audience" value="minor"><span><b>I am under 18</b><small>Read the extra safety information for young people.</small></span></label>
+</div>
+<div id="minor-note" class="crisis" hidden><b>Extra care for young people</b><p>Eloise plans to support adults and minors, but the minor-specific assessment and professional-review service are not enabled in this prototype. Please do not enter assessment answers here. Before launch, Eloise must establish age-appropriate consent, confidentiality limits, qualified child-and-adolescent professional review, safeguarding escalation, and a safe way to involve a parent or guardian when required by law and the young person's circumstances.</p><p>If you feel unsafe or need help now, speak to a trusted adult or qualified local professional. If there is immediate danger, contact local emergency services or go to the nearest emergency department. Eloise is not an emergency service.</p></div>
+<div id="adult-checkin" hidden>
+<div class="notice"><b>Adult demo check-in</b><p>These questions are reflective prompts created for this prototype, not a validated instrument. Select what feels most relevant; there are no right or wrong answers.</p></div>
+<form id="checkin-form">
+<fieldset><legend>1. What would you most like support with right now?</legend><div class="choice-grid">
+<label class="choice"><input type="radio" name="goal" value="stress"><span><b>Managing stress</b><small>Everyday pressure or feeling overwhelmed</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="mood"><span><b>Mood and motivation</b><small>Understanding feelings and daily routines</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="relationships"><span><b>Relationships</b><small>Communication, boundaries or connection</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="change"><span><b>A life change</b><small>Adjustment, decisions or personal growth</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="unsure"><span><b>I'm not sure</b><small>I would like help exploring options</small></span></label>
+</div></fieldset>
+<fieldset><legend>2. What kind of next step sounds most useful?</legend><div class="choice-grid">
+<label class="choice"><input type="radio" name="nextstep" value="self"><span><b>Self-guided resources</b><small>Learn at my own pace</small></span></label>
+<label class="choice"><input type="radio" name="nextstep" value="professional"><span><b>Talk with a professional</b><small>Discuss my situation with a qualified person</small></span></label>
+<label class="choice"><input type="radio" name="nextstep" value="explore"><span><b>Explore my options</b><small>I'm still deciding what would help</small></span></label>
+</div></fieldset>
+<label class="check-row"><input type="checkbox" id="checkin-consent" required> I understand this is a non-clinical demonstration, not a diagnosis, and that these selections stay in this browser page.</label>
+<button class="btn btn-amber" type="submit">Show my free summary</button><p id="checkin-status" class="form-msg" role="status" aria-live="polite"></p>
+</form>
+<section id="summary" class="summary-card" hidden aria-live="polite"><span class="step-label">YOUR FREE SUMMARY</span><h2 id="summary-title">A starting point for reflection</h2><p id="summary-copy"></p><p id="summary-next"></p><div class="actions"><a class="btn btn-primary" href="resources.html">Explore free resources</a><a class="btn btn-outline" href="matching.html">Explore support options</a></div><div class="paid-review"><span class="badge">Planned paid service · ₦3,000</span><h3>Professional interpretation</h3><p>A qualified professional would review the information you choose to share, discuss it in context and suggest suitable next steps. The service is not a diagnosis guarantee and is not currently available for purchase.</p><p class="small-note">The extended-review pilot is proposed at ₦5,000. Final pricing, turnaround, professional credentials, consent and refund terms will be confirmed before launch.</p><a class="btn btn-outline btn-sm" href="pricing.html">See proposed pricing</a></div></section>
+</div></div>
+</section>
+<section class="section"><div class="grid g2"><article class="card"><h2>What this check-in can do</h2><ul class="plain"><li>Help you name a support goal</li><li>Suggest a reasonable next step to explore</li><li>Explain how professional interpretation could work</li></ul></article><article class="card"><h2>What it cannot do</h2><ul class="plain"><li>Diagnose or rule out a condition</li><li>Assess immediate safety or replace crisis support</li><li>Recommend medication or guarantee an outcome</li></ul></article></div></section>
+</div></main>
+<footer class="site-footer"><div class="container"><img src="assets/img/logo-light.svg" alt="Eloise"><span><a href="resources.html">Safety and support resources</a></span><span><a href="pricing.html">Pricing</a></span><span>© 2026 Eloise · Prototype</span></div></footer>
+<script src="assets/js/main.js"></script><script src="assets/js/assessment.js"></script>
+</body></html>
