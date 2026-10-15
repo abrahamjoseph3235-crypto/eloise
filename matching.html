@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find your support | Eloise</title>
+<meta name="description" content="Explore mental-health support options based on your preferences, language, format and budget.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="container">
+<a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Eloise home"></a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="matching.html" aria-current="page">Find support</a><a href="resources.html">Resources</a><a href="provider.html">Become a provider</a><a href="client.html">Client space</a>
+</nav></div></header>
+<main id="main"><div class="container">
+<section class="hero match-hero"><div><span class="badge">A more personal starting point</span>
+<h1>Find support that fits your life.</h1>
+<p class="lead">Tell us what matters to you. We’ll show how Eloise can narrow down options by support needs, language, session format, budget and availability.</p>
+<div class="trust match-trust"><span>✓ You control your preferences</span><span>✓ No diagnosis from a quiz</span><span>✓ No answers are saved in this demo</span></div>
+</div><div class="card dark"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM8 12l3 3 5-6"/></svg></span><h2>Care should feel clear.</h2><p>Matching is a starting point, not a clinical decision. You can compare providers and choose what feels right for you.</p><p class="small-note">This prototype uses illustrative profiles, not real or verified clinicians. Do not enter private health information.</p></div></section>
+<section class="match-layout section">
+<form id="matching-form" class="card match-form">
+<div class="section-heading"><span class="step-label">YOUR PREFERENCES</span><h2>What would work best for you?</h2><p class="mut">All questions are optional. You can change your answers at any time.</p></div>
+<fieldset><legend>1. What kind of support are you looking for?</legend><div class="choice-grid">
+<label class="choice"><input type="radio" name="focus" value="anxiety"><span><b>Stress or anxiety</b><small>Worry, pressure or feeling overwhelmed</small></span></label>
+<label class="choice"><input type="radio" name="focus" value="mood"><span><b>Mood and motivation</b><small>Low mood, change or loss of interest</small></span></label>
+<label class="choice"><input type="radio" name="focus" value="relationships"><span><b>Relationships</b><small>Family, couples or communication</small></span></label>
+<label class="choice"><input type="radio" name="focus" value="life"><span><b>Life changes</b><small>Grief, adjustment or personal growth</small></span></label>
+<label class="choice"><input type="radio" name="focus" value="unsure"><span><b>I'm not sure yet</b><small>Help me explore the options</small></span></label>
+</div></fieldset>
+<div class="fields">
+<div><label for="format">Preferred session format</label><select id="format" name="format"><option value="any">Open to any format</option><option value="video">Video</option><option value="audio">Audio</option><option value="inperson">In person (where available)</option></select></div>
+<div><label for="language">Preferred language</label><select id="language" name="language"><option value="any">No preference</option><option value="english">English</option><option value="yoruba">Yoruba</option><option value="igbo">Igbo</option><option value="hausa">Hausa</option></select></div>
+<div><label for="budget">Budget per session</label><select id="budget" name="budget"><option value="any">Show all price ranges</option><option value="low">Prefer lower-cost options</option><option value="mid">Mid-range</option><option value="flexible">Flexible budget</option></select></div>
+<div><label for="availability">Best time</label><select id="availability" name="availability"><option value="any">Flexible</option><option value="morning">Morning</option><option value="afternoon">Afternoon</option><option value="evening">Evening</option><option value="weekend">Weekend</option></select></div>
+</div>
+<label class="check-row match-consent"><input type="checkbox" id="acknowledge-demo" required> I understand these are sample profiles and this demo does not book an appointment.</label>
+<div class="actions"><button class="btn btn-amber" type="submit">Explore matching options</button><button class="btn btn-outline" type="reset" id="reset-matching">Clear choices</button></div>
+<p id="match-status" class="form-msg" role="status" aria-live="polite"></p>
+</form>
+<aside class="match-aside"><div class="card"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 11v6M12 7h.01"/></svg></span><h3>What matching can—and can't—do</h3><ul class="plain"><li>Compare practical preferences</li><li>Help you prepare questions for a provider</li><li>Show what to check before booking</li></ul><p class="mut">It cannot diagnose you, guarantee a clinical fit or replace a conversation with a qualified professional.</p></div>
+<div class="crisis"><b>Need urgent help?</b><p>If you or someone else is in immediate danger, contact your local emergency service or go to the nearest emergency department. Eloise is not an emergency service.</p><a href="resources.html">View support and safety resources →</a></div></aside>
+</section>
+<section id="match-results" class="section results-section" hidden aria-labelledby="results-title">
+<div class="section-heading"><span class="step-label">YOUR SHORTLIST</span><h2 id="results-title">Options to explore</h2><p class="mut" id="results-intro">These illustrative profiles demonstrate how a shortlist could work.</p></div>
+<div id="results-list" class="grid g3"></div>
+<p class="small-note">These are fictional examples for interface testing. No credentials, availability, prices or services have been verified. Real profiles must be reviewed before Eloise accepts bookings.</p>
+</section>
+</div></main>
+<footer class="site-footer"><div class="container"><img src="assets/img/logo-light.svg" alt="Eloise"><span><a href="resources.html">Support resources</a></span><span><a href="help.html">Help & FAQs</a></span><span>© <span id="year">2026</span> Eloise</span></div></footer>
+<script src="assets/js/main.js"></script><script src="assets/js/matching.js"></script>
+</body></html>
