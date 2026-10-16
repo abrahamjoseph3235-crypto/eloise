@@ -20,6 +20,6 @@ export default {
     }
 
     const forwarded = new Request(target.toString(), new Request(request, { headers }));
-    return fetch(forwarded, { redirect: "manual" });
+    return fetch(forwarded, { redirect: "manual", cf: { cacheTtl: 0, cacheEverything: false } });
   }
 };
